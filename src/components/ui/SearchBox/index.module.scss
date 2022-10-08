@@ -1,0 +1,25 @@
+@import "../../../styles/variables";
+
+.form {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  input {
+    padding: 10px 0;
+    margin: 0;
+    width: 25vw;
+  }
+
+  input::placeholder {
+    padding-left: 1em;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .button {
+    background: $button;
+    width: 56px;
+    height: 40px;
+    border: 0;
+  }
+}

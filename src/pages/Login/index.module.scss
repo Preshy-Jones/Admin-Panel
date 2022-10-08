@@ -1,0 +1,64 @@
+@import "../../styles/variables";
+
+.container {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+  margin-bottom: 7rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 4rem;
+
+  input {
+    border: 2px solid rgba(84, 95, 125, 0.15);
+    border-radius: 5px;
+    width: 447px;
+    height: 50px;
+    margin-bottom: 1.5rem;
+    padding-left: 1em;
+  }
+  h3 {
+    color: $button;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: left;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.form_container {
+  h1 {
+    color: $primary;
+    font-weight: 700;
+    font-size: 40px;
+    margin: 0;
+  }
+  h2 {
+    color: $secondary;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+  }
+}
+
+.button {
+  background: $button;
+  border-radius: 8px;
+  color: #fff;
+  width: 447px;
+  height: 48px;
+  border: 0;
+}

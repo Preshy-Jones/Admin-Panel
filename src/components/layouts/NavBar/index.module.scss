@@ -1,0 +1,44 @@
+@import "../../../styles/variables";
+@mixin text {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+
+.photo {
+  img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+  }
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  .bell {
+    margin-right: 2rem;
+    margin-left: 3rem;
+  }
+  .name {
+    @include text;
+    margin: 0 1rem;
+  }
+  .docs {
+    @include text;
+    text-decoration-line: underline;
+  }
+}

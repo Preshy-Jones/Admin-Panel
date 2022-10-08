@@ -1,9 +1,42 @@
-import React from 'react'
+import React from "react";
+import Union from "../../assets/Union.svg";
+import Lendsqr from "../../assets/lendsqr.svg";
+import Pablo from "../../assets/pablo.svg";
+import styles from "./index.module.scss";
 
-const Login = () => {
+const Login: React.FC = () => {
   return (
-    <div>Login</div>
-  )
-}
+    <div className={styles.container}>
+      <div className="illustration">
+        <div className={styles.logo}>
+          <img src={Union} alt="union" />
+          <img src={Lendsqr} alt="lendsqr" />
+        </div>
+        <div>
+          <img src={Pablo} alt="" />
+        </div>
+      </div>
+      <div className={styles.form_container}>
+        <h1>Welcome!</h1>
+        <h2>Enter details to login.</h2>
+        <div>
+          <form className={styles.form}>
+            <div>
+              <input type="text" placeholder="Email" />
+            </div>
+            <div>
+              <input type="text" placeholder="Password" />
+            </div>
 
-export default Login
+            <h3>Forgot PASSWORD?</h3>
+            <button className={styles.button}>
+              LOG IN
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Login;

@@ -3,11 +3,13 @@
 .form {
   display: flex;
   align-items: center;
-  border-radius: 10px;
+
   input {
-    padding: 10px 0;
+    height: 40px;
     margin: 0;
     width: 25vw;
+    border: 1px solid #ccc;
+    border-radius: 10px 0 0 10px;
   }
 
   input::placeholder {
@@ -21,5 +23,6 @@
     width: 56px;
     height: 40px;
     border: 0;
+    border-radius: 0 10px 10px 0;
   }
 }

@@ -6,7 +6,7 @@ const SearchBox = () => {
   return (
     <div>
       <form className={styles.form}>
-        <input type="text" placeholder="Search for anything"/>
+        <input type="text" placeholder="Search for anything" />
         <button className={styles.button}>
           <SearchIcon />
         </button>

@@ -1,18 +1,18 @@
 import React from "react";
 import NavBar from "./NavBar";
 import SideBar from "./SideBar";
-import styles from "./index.module.css";
+import styles from "./index.module.scss";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div>
-      <div>
+    <div className={styles.container}>
+      <div className={styles.sidebar}>
         <SideBar />
       </div>
-      <div>
+      <div className={styles.navbar}>
         <NavBar />
       </div>
-      <main>{children}</main>
+      <main className={styles.main}>{children}</main>
     </div>
   );
 };

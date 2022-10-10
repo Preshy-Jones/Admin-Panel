@@ -1,0 +1,67 @@
+@import "../../../styles/index.scss";
+
+@mixin statusBorder {
+  padding: 0.5rem 0.2rem;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  background: #fff;
+  margin-top: 3rem;
+  padding: 2rem 2rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+
+  span {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+    display: flex;
+    align-items: flex-end;
+    text-transform: uppercase;
+    color: $secondary;
+    margin-right: 0.7rem;
+  }
+}
+
+.recordBody {
+  td {
+    font-weight: 400;
+    font-size: 0.875em;
+    line-height: 16px;
+    color: $secondary;
+    border-bottom: 2px solid #f2f2f2;
+    padding: 1rem 0;
+  }
+}
+
+.active {
+  background: mix(white, $active, 90);
+  color: $active;
+  @include statusBorder;
+}
+
+.inactive {
+  background: mix(white, $inactive, 90);
+  color: $inactive;
+  @include statusBorder;
+}
+
+.pending {
+  background: mix(white, $pending, 90);
+  color: $pending;
+  @include statusBorder;
+}
+
+.blacklisted {
+  background: mix(white, $blacklisted, 90);
+  color: $blacklisted;
+  @include statusBorder;
+}

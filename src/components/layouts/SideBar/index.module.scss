@@ -1,0 +1,58 @@
+@import "../../../styles/index.scss";
+
+@mixin item {
+  display: flex;
+  align-items: center;
+
+  h1 {
+    font-size: 1em;
+    color: $primary;
+    font-weight: 400;
+    line-height: 19px;
+
+    margin: 0 0.5rem;
+  }
+  h2 {
+    font-size: 1em;
+    color: $primary;
+    font-weight: 400;
+    line-height: 19px;
+    opacity: 0.5;
+    margin: 0 0.5rem;
+  }
+}
+.container {
+  display: grid;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  padding-left: 2.5rem;
+  background: #fff;
+  
+}
+
+.switch {
+  @include item;
+  margin-top: 0;
+}
+.dashboard {
+  @include item;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.menuItem {
+  @include item;
+  margin-bottom: 1.5rem;
+}
+
+.menusection {
+  margin-top: 1rem;
+  h1 {
+    color: $secondary;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+
+    margin-bottom: 1rem;
+  }
+}

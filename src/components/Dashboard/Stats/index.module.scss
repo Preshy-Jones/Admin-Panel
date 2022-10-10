@@ -1,0 +1,32 @@
+@import "../../../styles/index.scss";
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  column-gap: 2rem;
+}
+
+.stat {
+  background: #fff;
+  padding: 1.5rem;
+  width: 100%;
+  border: 1px solid rgba(33, 63, 125, 0.06);
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+  h1 {
+    font-weight: 600;
+    font-size: 1.5em;
+    line-height: 28px;
+    text-transform: uppercase;
+    color: $primary;
+    margin: 0;
+  }
+  h3 {
+    color: $secondary;
+    font-weight: 500;
+    font-size: 0.875em;
+    line-height: 16px;
+    text-transform: uppercase;
+    margin: 0.8rem 0;
+  }
+}

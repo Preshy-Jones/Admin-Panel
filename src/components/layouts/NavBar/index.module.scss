@@ -15,7 +15,10 @@
 .container {
   display: flex;
   justify-content: space-between;
-  padding: 0 2rem;
+  align-items: center;
+  padding: 1.5rem 0rem;
+  padding-left: 2rem;
+  padding-right: 4rem;
   background: #fff;
 }
 

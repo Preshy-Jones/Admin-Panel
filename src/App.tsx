@@ -11,7 +11,7 @@ import {
 import { LINKS } from "./utils/constants";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
-import { UserDashboard, UserDetails } from "./pages/Users";
+import { UserDashboard, UserDetails } from "./pages/Dashboard";
 import Layout from "./components/layouts";
 
 function App() {

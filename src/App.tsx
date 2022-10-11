@@ -27,7 +27,7 @@ function App() {
             </Layout>
           }
         >
-          <Route path={LINKS.USER_DETAILS} element={<UserDetails />} />
+          <Route  path={LINKS.USER_DETAILS} element={<UserDetails />} />
           <Route path={LINKS.DASHBOARD} element={<UserDashboard />} />
         </Route>
       </Routes>

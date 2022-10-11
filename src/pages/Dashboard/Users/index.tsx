@@ -1,6 +1,5 @@
 import React from "react";
-import Stats from "../../../components/Dashboard/Stats";
-import Table from "../../../components/Dashboard/Table";
+import { Pagination, Stats, Table } from "../../../components/Dashboard";
 import { userStatsData } from "../../../utils/content";
 import styles from "./index.module.scss";
 
@@ -10,6 +9,7 @@ const index = () => {
       <h1>Users</h1>
       <Stats items={userStatsData} />
       <Table />
+      <Pagination />
     </div>
   );
 };

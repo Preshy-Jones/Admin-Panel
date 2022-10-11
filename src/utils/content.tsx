@@ -127,3 +127,136 @@ export const dummyUsersData: User[] = [
     status: STATUS.PENDING,
   },
 ];
+
+export const bioContent = [
+  {
+    category: "Personal Information",
+    content: [
+      {
+        label: "FULL NAME",
+      },
+      {
+        label: "PHONE NUMBER",
+      },
+      {
+        label: "EMAIL ADDRESS",
+      },
+
+      {
+        label: "BVN",
+      },
+      {
+        label: "GENDER",
+      },
+      {
+        label: "MARITAL STATUS",
+      },
+      {
+        label: "CHILDREN",
+      },
+      {
+        label: "TYPE OF RESIDENCE",
+      },
+    ],
+  },
+  {
+    category: "Personal Information",
+    content: [
+      {
+        label: "FULL NAME",
+      },
+      {
+        label: "PHONE NUMBER",
+      },
+      {
+        label: "EMAIL ADDRESS",
+      },
+
+      {
+        label: "BVN",
+      },
+      {
+        label: "GENDER",
+      },
+      {
+        label: "MARITAL STATUS",
+      },
+      {
+        label: "CHILDREN",
+      },
+      {
+        label: "TYPE OF RESIDENCE",
+      },
+    ],
+  },
+  {
+    category: "Education and Employment",
+    content: [
+      {
+        label: "lEVEL OF EDUCATION",
+      },
+      {
+        label: "EMPLOYMENT STATUS",
+      },
+      {
+        label: "SECTOR OF EMPLOYMENT",
+      },
+
+      {
+        label: "DURATION OF EMPLOYMENT",
+      },
+      {
+        label: "MONTHLY INCOME",
+      },
+      {
+        label: "LOAN REPAYMENT",
+      },
+
+    ],
+  },
+  {
+    category: "Socials",
+    content: [
+      {
+        label: "TWITTER",
+      },
+      {
+        label: "FACEBOOK",
+      },
+      {
+        label: "INSTAGRAM",
+      },
+    ],
+  },
+  {
+    category: "Guarantor",
+    content: [
+      {
+        label: "FULL NAME",
+      },
+      {
+        label: "PHONE NUMBER",
+      },
+      {
+        label: "EMAIL ADDRESS",
+      },
+      {
+        label: "RELATIONSHIP",
+      },
+    ],
+  },
+  {
+    category: "Basic Info",
+    content: [
+      {
+        label: "FULL NAME",
+      },
+      {
+        label: "PHONE NUMBER",
+      },
+      {
+        label: "EMAIL ADDRESS",
+      },
+    ],
+  },
+];

@@ -1,0 +1,47 @@
+@import "../../../styles/index.scss";
+
+@mixin btn($color) {
+  font-weight: 600;
+  font-size: 0.875em;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  border-radius: 8px;
+  border: 1px solid $color;
+  color: $color;
+  padding: 0.7rem 1rem;
+  text-transform: uppercase;
+}
+.navigate {
+  display: flex;
+  align-items: center;
+  & > h4 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: $secondary;
+    margin-left: 0.9rem;
+  }
+}
+.userPanel {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.4rem;
+  & > h1 {
+    color: $primary;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.5em;
+    line-height: 28px;
+    margin-bottom: 2rem;
+  }
+}
+
+.activate {
+  @include btn($button);
+}
+
+.blacklist {
+  @include btn($blacklisted);
+  margin-right: 1.1rem;
+}

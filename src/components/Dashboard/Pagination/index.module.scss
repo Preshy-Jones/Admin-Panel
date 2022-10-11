@@ -1,0 +1,68 @@
+@import "../../../styles/index.scss";
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pageNumber {
+  display: flex;
+  align-items: center;
+  h2 {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: $secondary;
+  }
+}
+
+.selectContainer {
+  border: none;
+  border-radius: 0.25em;
+  padding: 0.25em 0.5em;
+  min-width: 8ch;
+
+  cursor: pointer;
+  line-height: 1.1;
+  background-color: rgba(33, 63, 125, 0.1);
+  display: grid;
+  grid-template-areas: "select";
+  align-items: center;
+  padding: 0.5rem 1rem;
+  margin: 0 0.7rem;
+}
+.select {
+  // A reset of styles, including removing the default dropdown arrow
+  appearance: none;
+  // Additional resets for further consistency
+  background-color: transparent;
+  border: none;
+  padding: 0 1em 0 0;
+  margin: 0;
+  width: 100%;
+  font-family: inherit;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 16px;
+  cursor: inherit;
+  line-height: inherit;
+  outline: none;
+  grid-area: select;
+}
+
+.select::-ms-expand {
+  display: none;
+  align-items: center;
+}
+
+.selectContainer::after {
+  content: "";
+  width: 0.8em;
+  height: 0.7em;
+  background-image: url("/assets/downIcon.svg");
+  background-repeat: no-repeat;
+  grid-area: select;
+  justify-self: end;
+  position: relative;
+  bottom: 0.1rem;
+}

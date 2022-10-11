@@ -14,3 +14,12 @@ export interface User {
   phoneNumber: string;
   status: Status;
 }
+
+export interface BioSectionType {
+  category: string;
+  content: BioItem[];
+}
+
+export interface BioItem {
+  label: string;
+}

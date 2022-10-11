@@ -29,3 +29,4 @@ export { default as ActiveUsersIcon } from "./ActiveUsersIcon";
 export { default as UserLoansIcon } from "./UserLoansIcon";
 export { default as SortIcon } from "./SortIcon";
 export { default as EclipseDotIcon } from "./EclipseDotIcon";
+export { default as LeftArrowIcon} from "./LeftArrowIcon";

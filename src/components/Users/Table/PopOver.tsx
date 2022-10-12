@@ -1,38 +1,48 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { EclipseDotIcon } from "../../ui/icons";
+import UsersContext from "../../../context/users/users-context";
+import {
+  ActivateUserIcon,
+  BlacklistUserIcon,
+  EclipseDotIcon,
+  EyeIcon,
+} from "../../ui/icons";
 import styles from "./index.module.scss";
 
 function PopOver({ id }: any) {
   const navigate = useNavigate();
   // const handleToggleAction = (option) => {};
 
-  const [userId, setUserId] = useState();
+  const { userId, setUserId } = useContext(UsersContext);
 
-  // const handleToggle = (id) => {
-  //   if (toggledOfferingSub !== id) {
-  //     dispatch(setToggledOfferingSub(id));
+  // const handleToggle = (id: string) => {
+  //   if (userId !== id) {
+  //     setUserId(id);
   //   } else {
-  //     dispatch(setToggledOfferingSub(null));
+  //     setUserId(null);
   //   }
   // };
+
   return (
     <div>
-      <span className={styles.EclipseDotsIcon}>
-        <EclipseDotIcon />
+      <span className={styles.eclipsedotsicon}>
+        <EclipseDotIcon
+        // onClick={() => handleToggle(id)}
+        />
       </span>
       {/* {userId === id && (
-        <div className="absolute top-8 right-8 z-10 w-[188px] rounded-md text-[14px] font-light text-vendor">
-          <div className="grid">
-            <h1 className=" hover:bg-primary hover:bg-opacity-10 pl-6 py-2.5">
-              Modify
-            </h1>
-            <h1 className=" hover:bg-primary hover:bg-opacity-10 pl-6 py-2.5">
-              View details
-            </h1>
-            <h1 className=" hover:bg-primary hover:bg-opacity-10 pl-6 py-2.5">
-              Manage interests
-            </h1>
+        <div className={styles.popover}>
+          <div>
+            <EyeIcon />
+            <h1>View details</h1>
+          </div>
+          <div>
+            <BlacklistUserIcon />
+            <h1>Blacklist User</h1>
+          </div>
+          <div>
+            <ActivateUserIcon />
+            <h1>Activate User</h1>
           </div>
         </div>
       )} */}

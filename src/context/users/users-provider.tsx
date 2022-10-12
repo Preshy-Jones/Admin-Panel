@@ -8,6 +8,7 @@ const UsersProvider = ({ children }: { children: React.ReactNode }) => {
   const [users, setUsers] = useState<User[]>([]);
   const [pageNumber, setPageNumber] = useState<number>(1);
   const usersPerPage = 10;
+  const [userId, setUserId] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -27,7 +28,14 @@ const UsersProvider = ({ children }: { children: React.ReactNode }) => {
   };
   return (
     <UsersContext.Provider
-      value={{ users, pageNumber, setPageNumber, usersPerPage }}
+      value={{
+        users,
+        pageNumber,
+        setPageNumber,
+        usersPerPage,
+        setUserId,
+        userId,
+      }}
     >
       {children}
     </UsersContext.Provider>

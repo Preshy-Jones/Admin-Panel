@@ -1,8 +1,9 @@
 import React from "react";
 
-const EclipseDotIcon = () => {
+const EclipseDotIcon = ({ ...rest }) => {
   return (
     <svg
+      {...rest}
       width="20"
       height="20"
       viewBox="0 0 20 20"

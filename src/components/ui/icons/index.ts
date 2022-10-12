@@ -30,3 +30,6 @@ export { default as UserLoansIcon } from "./UserLoansIcon";
 export { default as SortIcon } from "./SortIcon";
 export { default as EclipseDotIcon } from "./EclipseDotIcon";
 export { default as LeftArrowIcon} from "./LeftArrowIcon";
+export {default as ActivateUserIcon} from "./ActivateUserIcon";
+export { default as BlacklistUserIcon} from "./BlacklistUserIcon";
+export { default as EyeIcon} from "./EyeIcon";

@@ -6,6 +6,8 @@ interface UserContextInterface {
   pageNumber: number;
   setPageNumber(page: number): void;
   usersPerPage: number;
+  userId: string | null;
+  setUserId(id: string | null): void;
 }
 
 const defaultData = {
@@ -13,6 +15,8 @@ const defaultData = {
   pageNumber: 1,
   setPageNumber: () => null,
   usersPerPage: 10,
+  userId: null,
+  setUserId: () => null,
 };
 
 let UsersContext = createContext<UserContextInterface>(defaultData);

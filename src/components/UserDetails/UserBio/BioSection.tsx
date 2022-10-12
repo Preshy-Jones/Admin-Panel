@@ -1,8 +1,13 @@
 import React from "react";
-import { BioSectionType } from "../../../types/user";
+import { BioSectionType, User } from "../../../types/user";
 import styles from "./index.module.scss";
 
-const BioSection: React.FC<{ section: BioSectionType }> = ({ section }) => {
+interface Props {
+  section: BioSectionType;
+  user: User;
+}
+
+const BioSection: React.FC<Props> = ({ section, user }) => {
   return (
     <div className={styles.section}>
       <h1>{section.category}</h1>
@@ -10,7 +15,7 @@ const BioSection: React.FC<{ section: BioSectionType }> = ({ section }) => {
         {section.content.map((item) => (
           <div>
             <h2>{item.label}</h2>
-            <h3>Hello</h3>
+            <h3>{item.value(user)}</h3>
           </div>
         ))}
       </div>

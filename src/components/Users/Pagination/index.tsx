@@ -5,7 +5,7 @@ import Select from "./Select";
 import UsersContext from "../../../context/users/users-context";
 
 const Pagination = () => {
-  const { users, pageNumber, usersPerPage } = useContext(UsersContext);
+  const { users, pageNumber } = useContext(UsersContext);
 
   return (
     <div className={styles.container}>

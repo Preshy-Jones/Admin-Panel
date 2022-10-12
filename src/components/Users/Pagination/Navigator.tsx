@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import styles from "./index.module.scss";
 import ReactPaginate from "react-paginate";
 import UsersContext from "../../../context/users/users-context";

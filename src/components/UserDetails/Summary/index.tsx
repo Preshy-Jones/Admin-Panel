@@ -3,15 +3,20 @@ import Avatar from "../../../assets/avatar.svg";
 import styles from "./index.module.scss";
 import fullStar from "../../../assets/star.svg";
 import blankStar from "../../../assets/blankStar.svg";
+import { User } from "../../../types/user";
 
-const Summary = () => {
+const Summary: React.FC<{ user: User }> = ({ user }) => {
   return (
     <div className={styles.container}>
       <div className={styles.info}>
         <div className={styles.name}>
-          <img src={Avatar} alt="avatar" />
+          <img
+            className={styles.avatar}
+            src={user.profile.avatar ? user.profile.avatar : Avatar}
+            alt="avatar"
+          />
           <div>
-            <h1>Grace Effiom</h1>
+            <h1>{user.profile.firstName + " " + user.profile.lastName}</h1>
             <h2>LSQFf587g90</h2>
           </div>
         </div>
@@ -24,8 +29,8 @@ const Summary = () => {
           </div>
         </div>
         <div className={styles.wallet}>
-          <h1>₦200,000.00</h1>
-          <h2>9912345678/Providus Bank</h2>
+          <h1>₦{user.accountBalance}</h1>
+          <h2>{user.accountNumber}</h2>
         </div>
       </div>
       <div className={styles.navigation}>

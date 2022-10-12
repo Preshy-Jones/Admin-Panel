@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.scss";
 
 import {
@@ -27,8 +26,10 @@ function App() {
             </Layout>
           }
         >
-          <Route  path={LINKS.USER_DETAILS} element={<UserDetails />} />
-          <Route path={LINKS.DASHBOARD} element={<UserDashboard />} />
+          <Route path={LINKS.USERS}>
+            <Route index element={<UserDashboard />} />
+            <Route path={LINKS.USER_DETAILS} element={<UserDetails />} />
+          </Route>
         </Route>
       </Routes>
     </Router>

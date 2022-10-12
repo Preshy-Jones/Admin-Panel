@@ -15,12 +15,17 @@
 .navigate {
   display: flex;
   align-items: center;
+  margin-bottom: 2rem;
   & > h4 {
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
     color: $secondary;
     margin-left: 0.9rem;
+    a {
+      text-decoration: none;
+      cursor: pointer;
+    }
   }
 }
 .userPanel {

@@ -1,7 +1,6 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import UsersContext from "../../../context/users/users-context";
-import { User } from "../../../types/user";
-import { dummyUsersData, userTableHeaders } from "../../../utils/content";
+import { userTableHeaders } from "../../../utils/content";
 import { EclipseDotIcon, SortIcon } from "../../ui/icons";
 import styles from "./index.module.scss";
 import StatusComponent from "./StatusComponent";

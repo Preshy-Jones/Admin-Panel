@@ -10,10 +10,6 @@ export enum LINKS {
 }
 
 export enum ENDPOINTS {
-  LOGIN = "/v1/auth/login",
-  REGISTER = "/v1/auth/register",
-  GET_CURRENT_USER = "user/current",
-  GETUSERPOSTS = "/v1/dashboard/posts",
-  HANDLELIKES = "v1/posts/likes/",
-  GETPOSTS = "/v1/posts",
+  BASE_ENDPOINT = "https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1",
+  GET_USERS = "/users",
 }

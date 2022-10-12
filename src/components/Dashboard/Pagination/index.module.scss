@@ -66,3 +66,46 @@
   position: relative;
   bottom: 0.1rem;
 }
+
+.paginationBttns {
+  width: 80%;
+  height: 40px;
+  list-style: none;
+  display: flex;
+  justify-content: end;
+}
+
+.paginationBttns a:hover {
+  color: white;
+  background-color: mix(white, $secondary, 70);
+}
+
+.paginationBttns a {
+  padding: 10px;
+  margin: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: mix(white, $secondary, 40);
+  cursor: pointer;
+}
+
+.paginationActive a {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: $secondary;
+}
+
+.paginationDisabled a {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
+}
+
+.previousBttn,
+.nextBttn {
+  background: rgba(33, 63, 125, 0.1);
+  border-radius: 4px;
+}

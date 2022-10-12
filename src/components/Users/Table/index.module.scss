@@ -65,3 +65,11 @@
   color: $blacklisted;
   @include statusBorder;
 }
+
+.eclipsedotsicon {
+  cursor: pointer;
+}
+
+.tableDataHeader {
+  position: relative;
+}

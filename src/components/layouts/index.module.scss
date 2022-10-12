@@ -10,6 +10,10 @@
 }
 .sidebar {
   grid-column: 1/3;
+  display: none;
+  @include breakpoint(1100px) {
+    display: block;
+  }
 }
 
 .navbar {
@@ -18,7 +22,10 @@
 }
 
 .main {
-  grid-column: 3/11;
+  grid-column: 1/11;
+  @include breakpoint(1100px) {
+    grid-column: 3/11;
+  }
   padding: 0 3rem;
   padding-top: 4rem;
 }

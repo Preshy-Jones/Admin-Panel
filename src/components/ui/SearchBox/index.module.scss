@@ -1,4 +1,4 @@
-@import "../../../styles/variables";
+@import "../../../styles/index.scss";
 
 .form {
   display: flex;
@@ -7,7 +7,10 @@
   input {
     height: 40px;
     margin: 0;
-    width: 25vw;
+    width: 100%;
+    @include md {
+      width: 25vw;
+    }
     border: 1px solid #ccc;
     border-radius: 10px 0 0 10px;
   }

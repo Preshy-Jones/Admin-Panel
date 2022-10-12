@@ -6,15 +6,19 @@ import SearchBox from "../../ui/SearchBox";
 import BellIcon from "../../ui/icons/BellIcon";
 import ProfilePhoto from "../../../assets/profile_photo.jpeg";
 import CaretDown from "../../ui/icons/CaretDown";
+import Hamburger from "../../ui/icons/Hamburger";
 
 const NavBar = () => {
   return (
     <div className={styles.container}>
       <div className={styles.logo}>
+        <div className={styles.hamburger}>
+          <Hamburger />
+        </div>
         <img src={Union} alt="union" />
         <img src={Lendsqr} alt="lendsqr" />
       </div>
-      <div>
+      <div className={styles.search}>
         <SearchBox />
       </div>
       <div className={styles.info}>

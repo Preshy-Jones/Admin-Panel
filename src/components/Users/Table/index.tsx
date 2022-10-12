@@ -3,6 +3,7 @@ import UsersContext from "../../../context/users/users-context";
 import { userTableHeaders } from "../../../utils/content";
 import { EclipseDotIcon, SortIcon } from "../../ui/icons";
 import styles from "./index.module.scss";
+import PopOver from "./PopOver";
 import StatusComponent from "./StatusComponent";
 
 const Table = () => {
@@ -14,7 +15,7 @@ const Table = () => {
     .slice(pagesVisited, pagesVisited + usersPerPage)
     .map((user, index) => {
       return (
-        <tr key={index + 1}>
+        <tr className={styles.tableDataHeader} key={index + 1}>
           <td>{user.orgName}</td>
           <td>{user.userName}</td>
           <td>{user.email}</td>
@@ -23,9 +24,7 @@ const Table = () => {
           {/* <StatusComponent status={user?.status} /> */}
           <StatusComponent status="active" />
           <td>
-            <span>
-              <EclipseDotIcon />
-            </span>
+            <PopOver />
           </td>
         </tr>
       );

@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import UsersContext from "../../../context/users/users-context";
 import {
   ActivateUserIcon,
@@ -15,27 +15,27 @@ function PopOver({ id }: any) {
 
   const { userId, setUserId } = useContext(UsersContext);
 
-  // const handleToggle = (id: string) => {
-  //   if (userId !== id) {
-  //     setUserId(id);
-  //   } else {
-  //     setUserId(null);
-  //   }
-  // };
+  const handleToggle = (id: string) => {
+    if (userId !== id) {
+      setUserId(id);
+    } else {
+      setUserId(null);
+    }
+  };
 
   return (
     <div>
       <span className={styles.eclipsedotsicon}>
-        <EclipseDotIcon
-        // onClick={() => handleToggle(id)}
-        />
+        <EclipseDotIcon onClick={() => handleToggle(id)} />
       </span>
-      {/* {userId === id && (
+      {userId === id && (
         <div className={styles.popover}>
-          <div>
-            <EyeIcon />
-            <h1>View details</h1>
-          </div>
+          <Link to={`/users/user-details/${id}`}>
+            <div>
+              <EyeIcon />
+              <h1>View</h1>
+            </div>
+          </Link>
           <div>
             <BlacklistUserIcon />
             <h1>Blacklist User</h1>
@@ -45,7 +45,7 @@ function PopOver({ id }: any) {
             <h1>Activate User</h1>
           </div>
         </div>
-      )} */}
+      )}
     </div>
   );
 }

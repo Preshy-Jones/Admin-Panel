@@ -24,7 +24,7 @@ const Table = () => {
           {/* <StatusComponent status={user?.status} /> */}
           <StatusComponent status="active" />
           <td>
-            <PopOver />
+            <PopOver id={user.id} />
           </td>
         </tr>
       );

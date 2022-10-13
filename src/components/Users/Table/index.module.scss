@@ -81,13 +81,25 @@
   background: #fff;
   right: 2rem;
   z-index: 5;
-  div{
+  
+  a {
+    color: $secondary;
+    text-decoration: none;
+  }
+  div {
     display: flex;
+    align-items: center;
+    padding: 1rem 1rem;
+    cursor: pointer;
+    &:hover {
+      background: mix(white, $secondary, 90);
+    }
   }
   h1 {
     font-weight: 500;
     font-size: 14px;
     line-height: 16px;
-    color: $secondary;
+
+    margin-left: 1rem;
   }
 }

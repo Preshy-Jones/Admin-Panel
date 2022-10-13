@@ -23,7 +23,11 @@
 
 .details {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  @include lg {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
   row-gap: 1rem;
   h2 {
     font-weight: 400;
@@ -37,5 +41,6 @@
     font-size: 16px;
     line-height: 19px;
     color: $secondary;
+    word-wrap: break-word;
   }
 }

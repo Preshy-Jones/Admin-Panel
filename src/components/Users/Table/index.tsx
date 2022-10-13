@@ -3,11 +3,13 @@ import UsersContext from "../../../context/users/users-context";
 import { userTableHeaders } from "../../../utils/content";
 import { SortIcon } from "../../ui/icons";
 import styles from "./index.module.scss";
+import Modal from "./Modal";
 import PopOver from "./PopOver";
 import StatusComponent from "./StatusComponent";
 
 const Table = () => {
-  const { users, usersPerPage, pageNumber } = useContext(UsersContext);
+  const { users, usersPerPage, pageNumber, showModal, setShowModal } =
+    useContext(UsersContext);
 
   const pagesVisited = pageNumber * usersPerPage;
 
@@ -31,27 +33,36 @@ const Table = () => {
     });
 
   return (
-    <div>
+    <div className={styles.container}>
       {users.length > 0 && (
-        <table className={styles.container}>
-          <thead>
-            <tr>
-              {userTableHeaders.map((header, index) => (
-                <th key={index + 1} scope="col">
-                  {!header.hasIcon && header.title}
-                  {header.hasIcon && (
-                    <div className={styles.header}>
-                      <span>{header.title}</span>
-                      <SortIcon />
-                    </div>
-                  )}
-                </th>
-              ))}
-            </tr>
-          </thead>
-          <tbody className={styles.recordBody}>{displayUsers}</tbody>
-        </table>
+        <div className={styles.tablecontainer}>
+          <table className={styles.table}>
+            <thead>
+              <tr>
+                {userTableHeaders.map((header, index) => (
+                  <th key={index + 1} scope="col">
+                    {!header.hasIcon && header.title}
+                    {header.hasIcon && (
+                      <div className={styles.header}>
+                        <span>{header.title}</span>
+                        <SortIcon />
+                      </div>
+                    )}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody className={styles.recordBody}>{displayUsers}</tbody>
+          </table>
+          <button
+            className={styles.filter}
+            onClick={() => setShowModal(!showModal)}
+          >
+            Filter
+          </button>
+        </div>
       )}
+      {showModal && <Modal />}
     </div>
   );
 };

@@ -4,11 +4,12 @@
   display: flex;
   justify-content: space-between;
   padding: 0 2rem;
+  margin-top: 2rem;
+  align-items: center;
 }
 
 .pageNumber {
   display: flex;
-  align-items: center;
   h2 {
     font-weight: 400;
     font-size: 14px;

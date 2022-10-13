@@ -8,6 +8,8 @@ interface UserContextInterface {
   usersPerPage: number;
   userId: string | null;
   setUserId(id: string | null): void;
+  showModal: boolean;
+  setShowModal(status: boolean): void;
 }
 
 const defaultData = {
@@ -17,6 +19,8 @@ const defaultData = {
   usersPerPage: 10,
   userId: null,
   setUserId: () => null,
+  showModal: false,
+  setShowModal: () => null,
 };
 
 let UsersContext = createContext<UserContextInterface>(defaultData);

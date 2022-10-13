@@ -1,9 +1,8 @@
-import React from 'react'
+import React from "react";
+import styles from "./index.module.scss";
 
-const input = () => {
-  return (
-    <div>input</div>
-  )
-}
+const input = ({ ...rest }) => {
+  return <input {...rest} className={styles.input} type="text" />;
+};
 
-export default input
+export default input;

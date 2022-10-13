@@ -1,0 +1,17 @@
+@import "../../../styles/index.scss";
+
+input {
+  border: 1px solid mix(white, $primary, 80);
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  padding-left: 1em;
+}
+
+select {
+  border: 1px solid mix(white, $primary, 80);
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  padding-left: 1em;
+}

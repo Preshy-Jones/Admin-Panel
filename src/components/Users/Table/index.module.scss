@@ -9,8 +9,17 @@
 }
 
 .container {
-  width: 100%;
+  position: relative;
+}
+
+.tablecontainer {
   background: #fff;
+  padding-bottom: 2rem;
+}
+
+.table {
+  width: 100%;
+
   margin-top: 3rem;
   padding: 2rem 2rem;
 }
@@ -81,7 +90,7 @@
   background: #fff;
   right: 2rem;
   z-index: 5;
-  
+
   a {
     color: $secondary;
     text-decoration: none;
@@ -102,4 +111,64 @@
 
     margin-left: 1rem;
   }
+}
+
+.modal {
+  background: #fff;
+  z-index: 10;
+  padding: 2rem 1.5rem;
+  width: 270px;
+  position: absolute;
+  bottom: 8rem;
+  border: 1px solid rgba(84, 95, 125, 0.14);
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+  .form {
+    & > div {
+      margin-bottom: 2rem;
+    }
+  }
+  .input,
+  .select {
+    height: 40px;
+    margin-top: 0.5rem;
+  }
+  label {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: $secondary;
+  }
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  button {
+    width: 98px;
+    height: 40px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    border-radius: 8px;
+  }
+  .filter {
+    background: $button;
+    color: #ffffff;
+    border: none;
+  }
+  .reset {
+    color: $secondary;
+    border: 1px solid $secondary;
+    background: #fff;
+  }
+}
+
+.filter {
+  margin-left: 2rem;
+  background: mix(white, $secondary, 90);
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
 }

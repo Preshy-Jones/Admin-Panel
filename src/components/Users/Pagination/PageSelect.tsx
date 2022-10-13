@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./index.module.scss";
 
-const Select = () => {
+const PageSelect = () => {
   return (
     <div className={styles.selectContainer}>
       <select className={styles.select}>
@@ -20,4 +20,4 @@ const Select = () => {
   );
 };
 
-export default Select;
+export default PageSelect;

@@ -9,6 +9,7 @@ const UsersProvider = ({ children }: { children: React.ReactNode }) => {
   const [pageNumber, setPageNumber] = useState<number>(1);
   const usersPerPage = 10;
   const [userId, setUserId] = useState<string | null>(null);
+  const [showModal, setShowModal] = useState<boolean>(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -35,6 +36,8 @@ const UsersProvider = ({ children }: { children: React.ReactNode }) => {
         usersPerPage,
         setUserId,
         userId,
+        showModal,
+        setShowModal
       }}
     >
       {children}

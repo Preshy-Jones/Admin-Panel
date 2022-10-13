@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import UsersContext from "../../../context/users/users-context";
 import { userTableHeaders } from "../../../utils/content";
-import { EclipseDotIcon, SortIcon } from "../../ui/icons";
+import { SortIcon } from "../../ui/icons";
 import styles from "./index.module.scss";
 import PopOver from "./PopOver";
 import StatusComponent from "./StatusComponent";

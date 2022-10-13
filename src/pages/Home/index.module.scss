@@ -1,0 +1,33 @@
+@import "../../styles/index.scss";
+
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.navigate {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  div {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  & > h4 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: $secondary;
+    margin-right: 0.9rem;
+    a {
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+}

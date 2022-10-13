@@ -6,13 +6,10 @@ import {
 } from "../../../utils/content";
 import {
   BriefcaseIcon,
-  CaretDownIcon,
   DownIcon,
   HouseIcon,
 } from "../../ui/icons";
-
 import styles from "./index.module.scss";
-import MenuItem from "./MenuItem";
 import MenuSection from "./MenuSection";
 
 const SideBar = () => {

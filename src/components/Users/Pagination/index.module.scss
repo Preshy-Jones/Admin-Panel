@@ -62,7 +62,7 @@
   background-image: url("/assets/downIcon.svg");
   background-repeat: no-repeat;
   grid-area: select;
-  justify-self: end;
+  justify-self: flex-end;
   position: relative;
   bottom: 0.1rem;
 }
@@ -72,7 +72,7 @@
   height: 40px;
   list-style: none;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .paginationBttns a:hover {

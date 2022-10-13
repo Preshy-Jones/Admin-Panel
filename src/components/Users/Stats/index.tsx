@@ -11,7 +11,7 @@ const Stats: React.FC<{ items: MenuItemType[] }> = ({ items }) => {
         <div key={index + 1} className={styles.stat}>
           {item.icon}
           <h3>{item.label}</h3>
-          <h1>{item.label == "USERS" ? users.length : 1450}</h1>
+          <h1>{item.label === "USERS" ? users.length : 1450}</h1>
         </div>
       ))}
     </div>

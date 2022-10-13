@@ -1,5 +1,5 @@
-import React, { useContext, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import UsersContext from "../../../context/users/users-context";
 import {
   ActivateUserIcon,
@@ -10,8 +10,6 @@ import {
 import styles from "./index.module.scss";
 
 function PopOver({ id }: any) {
-  const navigate = useNavigate();
-  // const handleToggleAction = (option) => {};
 
   const { userId, setUserId } = useContext(UsersContext);
 

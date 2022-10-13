@@ -1,8 +1,6 @@
 import axios from "axios";
 import { ENDPOINTS } from "../utils/constants";
 
-import { getStorage } from "../utils/localStorage";
-
 const client = () => {
   const instance = axios.create({
     baseURL: ENDPOINTS.BASE_ENDPOINT,

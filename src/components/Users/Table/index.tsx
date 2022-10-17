@@ -22,7 +22,7 @@ const Table = () => {
           <td>{user.userName}</td>
           <td>{user.email}</td>
           <td>{user.phoneNumber}</td>
-          <td>May 15, 2020 10:00 AM</td>
+          <td>{user.lastActiveDate}</td>
           {/* <StatusComponent status={user?.status} /> */}
           <StatusComponent status="active" />
           <td>

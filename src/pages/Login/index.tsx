@@ -9,7 +9,7 @@ const Login: React.FC = () => {
   const navigate = useNavigate();
   return (
     <div className={styles.container}>
-      <div className="illustration">
+      <div className={styles.illustration}>
         <div className={styles.logo}>
           <img src={Union} alt="union" />
           <img src={Lendsqr} alt="lendsqr" />

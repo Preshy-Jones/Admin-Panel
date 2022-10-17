@@ -3,8 +3,10 @@ import Union from "../../assets/Union.svg";
 import Lendsqr from "../../assets/lendsqr.svg";
 import Pablo from "../../assets/pablo.svg";
 import styles from "./index.module.scss";
+import { useNavigate } from "react-router-dom";
 
 const Login: React.FC = () => {
+  const navigate = useNavigate();
   return (
     <div className={styles.container}>
       <div className="illustration">
@@ -29,7 +31,10 @@ const Login: React.FC = () => {
             </div>
 
             <h3>Forgot PASSWORD?</h3>
-            <button className={styles.button}>
+            <button
+              className={styles.button}
+              onClick={() => navigate("/users")}
+            >
               LOG IN
             </button>
           </form>

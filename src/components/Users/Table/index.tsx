@@ -40,7 +40,6 @@ const Table = () => {
 
   return (
     <div className={styles.container}>
-      <pre>{JSON.stringify(values, null, 2)}</pre>
       {users.length > 0 && (
         <div className={styles.tablecontainer}>
           <table className={styles.table}>

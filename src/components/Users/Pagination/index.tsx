@@ -10,9 +10,11 @@ const Pagination = () => {
   return (
     <div className={styles.container}>
       <div className={styles.pageNumber}>
-        <h2>Showing of</h2>
+        <h2>Showing</h2>
         <Select />
-        <h2>Out of 100</h2>
+        <div className={styles.max}>
+          <h2>Out of 100</h2>
+        </div>
       </div>
       <Navigator />
     </div>

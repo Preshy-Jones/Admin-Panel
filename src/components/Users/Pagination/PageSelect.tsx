@@ -1,20 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
+import UsersContext from "../../../context/users/users-context";
 import styles from "./index.module.scss";
 
 const PageSelect = () => {
+  const { setUsersPerPage } = useContext(UsersContext);
+
   return (
     <div className={styles.selectContainer}>
-      <select className={styles.select}>
-        <option value="0">100</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
+      <select
+        onChange={(e) => setUsersPerPage(Number(e.target.value))}
+        className={styles.select}
+      >
+        <option value="10">10</option>
+        <option value="20">20</option>
+        <option value="50">50</option>
+        <option value="100">100</option>
+        <option value="500">500</option>
       </select>
     </div>
   );

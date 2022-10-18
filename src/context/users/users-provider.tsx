@@ -7,7 +7,7 @@ import { ENDPOINTS } from "../../utils/constants";
 const UsersProvider = ({ children }: { children: React.ReactNode }) => {
   const [users, setUsers] = useState<User[]>([]);
   const [pageNumber, setPageNumber] = useState<number>(1);
-  const usersPerPage = 10;
+  const [usersPerPage, setUsersPerPage] = useState<number>(10);
   const [userId, setUserId] = useState<string | null>(null);
   const [showModal, setShowModal] = useState<boolean>(false);
 
@@ -34,10 +34,11 @@ const UsersProvider = ({ children }: { children: React.ReactNode }) => {
         pageNumber,
         setPageNumber,
         usersPerPage,
+        setUsersPerPage,
         setUserId,
         userId,
         showModal,
-        setShowModal
+        setShowModal,
       }}
     >
       {children}

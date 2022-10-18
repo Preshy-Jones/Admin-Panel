@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import UsersContext from "../../../context/users/users-context";
 import { userTableHeaders } from "../../../utils/content";
+import { statusGenerator } from "../../../utils/utility";
 import { SortIcon } from "../../ui/icons";
 import styles from "./index.module.scss";
 import Modal from "./Modal";
@@ -13,6 +14,11 @@ const Table = () => {
 
   const pagesVisited = pageNumber * usersPerPage;
 
+  const values = {
+    pagesVisited,
+    pageNumber,
+    usersPerPage,
+  };
   const displayUsers = users
     .slice(pagesVisited, pagesVisited + usersPerPage)
     .map((user, index) => {
@@ -24,7 +30,7 @@ const Table = () => {
           <td>{user.phoneNumber}</td>
           <td>{user.lastActiveDate}</td>
           {/* <StatusComponent status={user?.status} /> */}
-          <StatusComponent status="active" />
+          <StatusComponent status={statusGenerator(user.accountBalance)} />
           <td>
             <PopOver id={user.id} />
           </td>
@@ -34,6 +40,7 @@ const Table = () => {
 
   return (
     <div className={styles.container}>
+      <pre>{JSON.stringify(values, null, 2)}</pre>
       {users.length > 0 && (
         <div className={styles.tablecontainer}>
           <table className={styles.table}>

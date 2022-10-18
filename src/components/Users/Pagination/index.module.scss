@@ -10,6 +10,7 @@
 
 .pageNumber {
   display: flex;
+  align-items: center;
   h2 {
     font-weight: 400;
     font-size: 14px;
@@ -110,4 +111,12 @@
 .nextBttn {
   background: rgba(33, 63, 125, 0.1);
   border-radius: 4px;
+}
+
+.max {
+  display: flex;
+  width: 5rem;
+  h2 {
+    word-break: keep-all;
+  }
 }

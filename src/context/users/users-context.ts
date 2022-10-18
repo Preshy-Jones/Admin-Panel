@@ -6,6 +6,7 @@ interface UserContextInterface {
   pageNumber: number;
   setPageNumber(page: number): void;
   usersPerPage: number;
+  setUsersPerPage(value: number): void;
   userId: string | null;
   setUserId(id: string | null): void;
   showModal: boolean;
@@ -17,6 +18,7 @@ const defaultData = {
   pageNumber: 1,
   setPageNumber: () => null,
   usersPerPage: 10,
+  setUsersPerPage: () => null,
   userId: null,
   setUserId: () => null,
   showModal: false,

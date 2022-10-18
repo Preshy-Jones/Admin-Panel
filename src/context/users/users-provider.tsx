@@ -6,7 +6,7 @@ import { ENDPOINTS } from "../../utils/constants";
 
 const UsersProvider = ({ children }: { children: React.ReactNode }) => {
   const [users, setUsers] = useState<User[]>([]);
-  const [pageNumber, setPageNumber] = useState<number>(1);
+  const [pageNumber, setPageNumber] = useState<number>(0);
   const [usersPerPage, setUsersPerPage] = useState<number>(10);
   const [userId, setUserId] = useState<string | null>(null);
   const [showModal, setShowModal] = useState<boolean>(false);

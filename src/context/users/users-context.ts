@@ -11,6 +11,8 @@ interface UserContextInterface {
   setUserId(id: string | null): void;
   showModal: boolean;
   setShowModal(status: boolean): void;
+  loading: boolean;
+  setLoading(status: boolean): void;
 }
 
 const defaultData = {
@@ -23,6 +25,8 @@ const defaultData = {
   setUserId: () => null,
   showModal: false,
   setShowModal: () => null,
+  loading: false,
+  setLoading: () => null,
 };
 
 let UsersContext = createContext<UserContextInterface>(defaultData);

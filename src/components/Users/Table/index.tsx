@@ -7,9 +7,10 @@ import styles from "./index.module.scss";
 import Modal from "./Modal";
 import PopOver from "./PopOver";
 import StatusComponent from "./StatusComponent";
+import TableSkeleton from "./TableSkeleton";
 
 const Table = () => {
-  const { users, usersPerPage, pageNumber, showModal, setShowModal } =
+  const { users, loading, usersPerPage, pageNumber, showModal, setShowModal } =
     useContext(UsersContext);
 
   const pagesVisited = pageNumber * usersPerPage;
@@ -40,7 +41,8 @@ const Table = () => {
 
   return (
     <div className={styles.container}>
-      {users.length > 0 && (
+      {loading && <TableSkeleton />}
+      {!loading && users.length > 0 && (
         <div className={styles.tablecontainer}>
           <table className={styles.table}>
             <thead>
@@ -60,6 +62,7 @@ const Table = () => {
             </thead>
             <tbody className={styles.recordBody}>{displayUsers}</tbody>
           </table>
+
           <button
             className={styles.filter}
             onClick={() => setShowModal(!showModal)}

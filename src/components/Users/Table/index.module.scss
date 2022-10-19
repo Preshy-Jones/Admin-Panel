@@ -10,6 +10,7 @@
 
 .container {
   position: relative;
+  background: #fff;
 }
 
 .tablecontainer {
@@ -171,4 +172,16 @@
   border-radius: 8px;
   padding: 0.5rem 1rem;
   cursor: pointer;
+}
+
+.skeleton_container {
+  margin-top: 3rem;
+}
+
+.record_skeleton {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  column-gap: 1rem;
+  border-bottom: 2px solid #f2f2f2;
+  padding: 1rem 0;
 }

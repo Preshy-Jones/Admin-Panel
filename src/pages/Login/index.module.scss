@@ -1,4 +1,4 @@
-@import "../../styles/variables";
+@import "../../styles/index";
 
 .container {
   display: flex;
@@ -7,10 +7,64 @@
   align-items: center;
 }
 
+.cover {
+  width: 80%;
+  margin-bottom: 5rem;
+}
+.section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  @include breakpoint(1100px) {
+    flex-direction: row;
+  }
+}
+
 .logo {
   display: flex;
   align-items: center;
-  margin-bottom: 7rem;
+  margin-bottom: 5rem;
+}
+
+.illustration {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  @include breakpoint(1100px) {
+    flex-direction: row;
+    width: 50%;
+  }
+}
+
+.form_container {
+  width: 100%;
+  & > h1,
+  & > h2 {
+    text-align: center;
+  }
+  @include breakpoint(1100px) {
+    flex-direction: row;
+    width: 40%;
+    & > h1,
+    & > h2 {
+      text-align: justify;
+    }
+  }
+
+  h1 {
+    color: $primary;
+    font-weight: 700;
+    font-size: 40px;
+    margin-bottom: 1rem;
+  }
+  h2 {
+    color: $secondary;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+  }
 }
 
 .form {
@@ -22,7 +76,7 @@
   input {
     border: 2px solid rgba(84, 95, 125, 0.15);
     border-radius: 5px;
-    width: 447px;
+    //    width: 447px;
     height: 50px;
     margin-bottom: 1.5rem;
     padding-left: 1em;
@@ -35,22 +89,7 @@
     text-align: left;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    margin-bottom: 1.5rem;
-  }
-}
-
-.form_container {
-  h1 {
-    color: $primary;
-    font-weight: 700;
-    font-size: 40px;
-    margin: 0;
-  }
-  h2 {
-    color: $secondary;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
+    margin-bottom: 2rem;
   }
 }
 
@@ -58,8 +97,20 @@
   background: $button;
   border-radius: 8px;
   color: #fff;
-  width: 447px;
+  //width: 447px;
   height: 48px;
   border: 0;
   cursor: pointer;
+}
+
+.password {
+  position: relative;
+  .toggle_password {
+    position: absolute;
+    right: 2rem;
+    top: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    color: $button;
+  }
 }

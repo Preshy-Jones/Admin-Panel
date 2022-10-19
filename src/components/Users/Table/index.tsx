@@ -14,12 +14,6 @@ const Table = () => {
     useContext(UsersContext);
 
   const pagesVisited = pageNumber * usersPerPage;
-
-  const values = {
-    pagesVisited,
-    pageNumber,
-    usersPerPage,
-  };
   const displayUsers = users
     .slice(pagesVisited, pagesVisited + usersPerPage)
     .map((user, index) => {

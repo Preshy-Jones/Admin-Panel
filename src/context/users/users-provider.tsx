@@ -31,9 +31,6 @@ const UsersProvider = ({ children }: { children: React.ReactNode }) => {
     }
   }, []);
 
-  const value = {
-    users,
-  };
   return (
     <UsersContext.Provider
       value={{

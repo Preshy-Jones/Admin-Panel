@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import styles from "./index.module.scss";
 
 const TableSkeleton = () => {
-  const [state, setState] = useState(true);
   const rows = Array(10).fill(null);
   return (
     <SkeletonTheme baseColor="rgba(184, 193, 213, 0.19)" highlightColor="white">

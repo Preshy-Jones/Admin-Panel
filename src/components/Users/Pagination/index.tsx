@@ -5,15 +5,15 @@ import Select from "./PageSelect";
 import UsersContext from "../../../context/users/users-context";
 
 const Pagination = () => {
-  const { pageNumber } = useContext(UsersContext);
+  const { users, usersPerPage } = useContext(UsersContext);
 
   return (
     <div className={styles.container}>
       <div className={styles.pageNumber}>
-        <h2>Showing</h2>
+        <h2>Showing {usersPerPage}</h2>
         <Select />
         <div className={styles.max}>
-          <h2>Out of 100</h2>
+          <h2>Out of {users.length}</h2>
         </div>
       </div>
       <Navigator />

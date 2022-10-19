@@ -10,7 +10,7 @@ const Pagination = () => {
   return (
     <div className={styles.container}>
       <div className={styles.pageNumber}>
-        <h2>Showing {usersPerPage}</h2>
+        <h2>Showing</h2>
         <Select />
         <div className={styles.max}>
           <h2>Out of {users.length}</h2>

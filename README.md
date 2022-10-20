@@ -28,7 +28,13 @@ Loads a user's data from a mock api using the id passed as a route parameter, di
   - User bio stats
   - Userdetails table
 
-### Login
+## Login
 
 A simple login page with a form to enter email and password, a button to submit the form and a link to go back to the users page. A button under the password input field can also be toggled to show or hide the password.
+
+
+## Other components
+
+  ### NavBar Searchbox
+  - searches users by organization name, username and email
 

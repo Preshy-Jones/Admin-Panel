@@ -2,7 +2,7 @@ import React from "react";
 import Union from "../../../assets/union-nav.svg";
 import Lendsqr from "../../../assets/lendsqr-nav.svg";
 import styles from "./index.module.scss";
-import SearchBox from "../../ui/SearchBox";
+import SearchBox from "./SearchBox";
 import BellIcon from "../../ui/icons/BellIcon";
 import ProfilePhoto from "../../../assets/profile_photo.jpeg";
 import CaretDown from "../../ui/icons/CaretDown";

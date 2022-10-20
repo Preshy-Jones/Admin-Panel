@@ -10,7 +10,7 @@ const TableSkeleton = () => {
       <div className={styles.skeleton_container}>
         <Skeleton height={60} />
         {rows.map((row, index) => (
-          <div className={styles.record_skeleton}>
+          <div key={index + 1} className={styles.record_skeleton}>
             <Skeleton />
             <Skeleton />
             <Skeleton />

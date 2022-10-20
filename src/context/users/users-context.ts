@@ -3,6 +3,7 @@ import { User } from "../../types/user";
 
 interface UserContextInterface {
   users: User[];
+  setUsers: (users: User[]) => void;
   pageNumber: number;
   setPageNumber(page: number): void;
   usersPerPage: number;
@@ -17,6 +18,7 @@ interface UserContextInterface {
 
 const defaultData = {
   users: [],
+  setUsers: () => null,
   pageNumber: 1,
   setPageNumber: () => null,
   usersPerPage: 10,

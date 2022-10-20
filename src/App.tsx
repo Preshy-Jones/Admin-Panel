@@ -12,26 +12,29 @@ import Login from "./pages/Login";
 import Home from "./pages/Home";
 import { UserDashboard, UserDetails } from "./pages/Dashboard";
 import Layout from "./components/layouts";
+import UsersProvider from "./context/users/users-provider";
 
 function App() {
   return (
     <Router>
-      <Routes>
-        <Route path={LINKS.BASE_URL} element={<Home />} />
-        <Route path={LINKS.LOGIN} element={<Login />} />
-        <Route
-          element={
-            <Layout>
-              <Outlet />
-            </Layout>
-          }
-        >
-          <Route path={LINKS.USERS}>
-            <Route index element={<UserDashboard />} />
-            <Route path={LINKS.USER_DETAILS} element={<UserDetails />} />
+      <UsersProvider>
+        <Routes>
+          <Route path={LINKS.BASE_URL} element={<Home />} />
+          <Route path={LINKS.LOGIN} element={<Login />} />
+          <Route
+            element={
+              <Layout>
+                <Outlet />
+              </Layout>
+            }
+          >
+            <Route path={LINKS.USERS}>
+              <Route index element={<UserDashboard />} />
+              <Route path={LINKS.USER_DETAILS} element={<UserDetails />} />
+            </Route>
           </Route>
-        </Route>
-      </Routes>
+        </Routes>
+      </UsersProvider>
     </Router>
   );
 }

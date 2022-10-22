@@ -19,6 +19,11 @@ User details page : /users/user-details/:id
   - Pagination
   - Stats
 
+- Features
+  - View Users table
+  - Popover to link to user details page
+  - Search for users from searchbox on the navbar by organization name, email and username.
+
 ### Userdetails:
 
 Loads a user's data from a mock api using the id passed as a route parameter, displays several information about the user and a button to go back to the users page.

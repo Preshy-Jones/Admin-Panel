@@ -1,7 +1,9 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import UsersContext from "../../../../context/users/users-context";
+import { ENDPOINTS } from "../../../../utils/constants";
 import SearchIcon from "../../../ui/icons/SearchIcon";
 import styles from "./index.module.scss";
+import axios from "../../../../api/client";
 
 const SearchBox = () => {
   const { users, setUsers, setLoading } = useContext(UsersContext);
@@ -25,6 +27,24 @@ const SearchBox = () => {
     setUsers(filteredUsers);
     setLoading(false);
   };
+
+  useEffect(() => {
+    const fetchData = async () => {
+      setLoading(true);
+      const response = await axios.get(ENDPOINTS.GET_USERS);
+      const users = response.data;
+      setUsers(users);
+      setLoading(false);
+    };
+    if (searchArg === "") {
+      try {
+        fetchData();
+      } catch (error) {
+        console.log(error);
+        setLoading(false);
+      }
+    }
+  }, [searchArg]);
   return (
     <div>
       <form className={styles.form}>
